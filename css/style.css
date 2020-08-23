@@ -1,0 +1,1003 @@
+/* ----------------------------------------------- */
+/* ---------------- FUNCTIONS -------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ------------------ MIXINS --------------------- */
+/* ----------------------------------------------- */
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+/* ----------------------------------------------- */
+/* ---------------- VARIABLES -------------------- */
+/* ----------------------------------------------- */
+/* ----- PRIMARY COLORS ----- */
+/* ------------------------------*/
+/* COLORS OF THE ERAs */
+/* ------------------------------*/
+/* ----- ERA 1 ----- */
+/* ----- ERA 2 ----- */
+/* ----- ERA 3 ----- */
+/* ------------------------------*/
+/* FONT VARIABLES */
+/* ------------------------------*/
+/* ----- FONT COLORS ----- */
+/* ----- FONT STYLES ----- */
+/* ----- GRID ----- */
+/* ----------------------------------------------- */
+/* ---------------- BASE FILE -------------------- */
+/* ----------------------------------------------- */
+/* ----- DEFAULT CSS ----- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  text-decoration: none; }
+
+/* ----- SETTING UP ----- */
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+/* ----- BODY BASE ----- */
+body {
+  box-sizing: border-box;
+  background-image: linear-gradient(to bottom right, #3aafa9, #0c4641);
+  background-attachment: fixed;
+  height: 100%; }
+
+.site-wrap {
+  height: 100%;
+  margin: 0;
+  clear: both; }
+
+/* ----------------------------------------------- */
+/* --- CLASS MAIN --- */
+/* ----------------------------------------------- */
+.main {
+  margin: 0 0 0 10rem;
+  display: block;
+  padding: 8.2rem 19%;
+  /* ----- LANDING PAGE ----- */
+  /* ----- PAINTINGS PAGE ----- */ }
+  .main__landing {
+    background-image: linear-gradient(to left, rgba(12, 70, 65, 0.601), rgba(58, 175, 169, 0.601)), url("../files/background.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-position: center; }
+  .main-p {
+    margin: 0 0 0 10rem;
+    display: block;
+    padding: 4vh 10vw; }
+
+/* ----------------------------------------------- */
+/* --- BASE MEDIA QUESRIES --- */
+/* ----------------------------------------------- */
+/* ----- LANDING PAGE ----- */
+@media only screen and (max-width: 840px) {
+  .main__landing {
+    background-position: left; } }
+
+/* ----- PAINTINGS PAGE ----- */
+@media only screen and (max-width: 1440px) {
+  .main-p {
+    padding: 10.5rem 4%; } }
+
+@media only screen and (max-width: 960px) {
+  .main-p {
+    margin: 0; } }
+
+@media only screen and (max-width: 750px) {
+  .main-p {
+    padding: 8.2rem 7%; } }
+
+@media only screen and (max-width: 600px) {
+  .main-p {
+    padding: 8.2rem 4%; } }
+
+/* ----- REST OF THE PAGES ----- */
+@media only screen and (max-width: 1440px) {
+  .main {
+    padding: 6.5rem 9%; } }
+
+@media only screen and (max-width: 960px) {
+  .main {
+    margin: 0; } }
+
+@media only screen and (max-width: 750px) {
+  .main {
+    padding: 8.2rem 7%; } }
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding: 8.2rem 4%; } }
+
+/* ----------------------------------------------- */
+/* ---------------- ANIMATIONS ------------------- */
+/* ----------------------------------------------- */
+body {
+  animation: fadein 2s;
+  backface-visibility: hidden; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* ----------------------------------------------- */
+/* ---------------- TYPOGRAPHY ------------------- */
+/* ----------------------------------------------- */
+@font-face {
+  font-family: 'cocomatlight';
+  src: url("cocomatt/cocomatlight-zxy3-webfont.woff2") format("woff2"), url("cocomatt/cocomatlight-zxy3-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'FuturaStd-Light';
+  src: url("futura/FuturaStd-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/* ----- BASE FONT SETTINGS ----- */
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  color: #def2f1;
+  font-family: "FuturaStd-Light", sans-serif; }
+
+/* ------------------------------*/
+/* FONT STYLING */
+/* ------------------------------*/
+.main {
+  /* ----- HEADING FONT ----- */
+  /* ----- SUB-HEADING FONT ----- */
+  /* ----- NORMAL FONT ----- */
+  /* ---------------- LANDING PAGE FONT STYLING ------------------ */ }
+  .main__heading {
+    text-align: center;
+    color: #17252a;
+    font-size: 8rem;
+    margin-bottom: 10rem;
+    font-variant: small-caps;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    font-family: "cocomatlight", sans-serif; }
+  .main__sub-heading {
+    color: #9ebdbb;
+    font-variant: small-caps;
+    font-weight: 700;
+    letter-spacing: .5rem;
+    font-size: 2.4rem;
+    font-family: "cocomatlight", sans-serif; }
+  .main__paragraph {
+    font-size: 2.2rem;
+    color: #def2f1;
+    text-align: justify;
+    line-height: 150%;
+    font-family: "FuturaStd-Light", sans-serif; }
+    .main__paragraph-link {
+      color: #def2f1;
+      display: inline-block; }
+      .main__paragraph-link:hover {
+        color: #111111; }
+  .main__landing {
+    font-family: "FuturaStd-Light", sans-serif; }
+    .main__landing-text {
+      position: relative;
+      text-transform: uppercase;
+      top: 35vh;
+      padding-left: 19vw;
+      display: block;
+      line-height: px;
+      padding: 2rem 10vw;
+      line-height: 50px;
+      color: #ffffff; }
+      .main__landing-text--pre {
+        display: block;
+        position: relative;
+        font-size: 3rem;
+        letter-spacing: .5vw;
+        padding-left: 5px; }
+      .main__landing-text--main {
+        display: block;
+        position: relative;
+        font-size: 7rem;
+        letter-spacing: 1vw; }
+      .main__landing-text--sub {
+        display: block;
+        position: relative;
+        font-size: 4rem;
+        letter-spacing: .5vw; }
+
+/* ---------------- CONTACT PAGE HEADING FONT STYLING ------------------ */
+.heading-contact {
+  font-family: "FuturaStd-Light", sans-serif;
+  font-size: 3.5rem;
+  font-variant: small-caps;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #3aafa9, #17252a);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-contact {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-contact {
+      font-size: 2.5rem; } }
+  .heading-contact:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(17, 17, 17, 0.2); }
+
+/* --------------------------------------------------------------*/
+/* ------------ FONT MEDIA QUERIES ------------- */
+/* --------------------------------------------------------------*/
+/* ---------------- LANDING PAGE FONT STYLING ------------------ */
+@media only screen and (max-width: 750px) {
+  .main__landing-text--pre {
+    font-size: 2.4rem !important; }
+  .main__landing-text--main {
+    font-size: 5.6rem !important; }
+  .main__landing-text--sub {
+    font-size: 3.5rem !important; } }
+
+@media only screen and (max-width: 530px) {
+  .main__landing-text--pre {
+    font-size: 1.8rem !important; }
+  .main__landing-text--main {
+    font-size: 4.8rem !important; }
+  .main__landing-text--sub {
+    font-size: 2.8rem !important; } }
+
+@media only screen and (max-width: 450px) {
+  .main__landing-text--pre {
+    font-size: 1.5rem !important; }
+  .main__landing-text--main {
+    font-size: 4rem !important; }
+  .main__landing-text--sub {
+    font-size: 2.2rem !important; } }
+
+@media only screen and (max-width: 390px) {
+  .main__landing-text--pre {
+    font-size: 1.3rem !important; }
+  .main__landing-text--main {
+    font-size: 3.7rem !important; }
+  .main__landing-text--sub {
+    font-size: 2rem !important; } }
+
+@media only screen and (max-width: 355px) {
+  .main__landing-text--pre {
+    font-size: 1.1rem !important; }
+  .main__landing-text--main {
+    font-size: 3.2rem !important; }
+  .main__landing-text--sub {
+    font-size: 1.8rem !important; } }
+
+/* ---------------- LINK PAGES FONT STYLING ------------------ */
+@media only screen and (max-width: 960px) {
+  .main__heading {
+    margin: 6rem 0; } }
+
+@media only screen and (max-width: 750px) {
+  .main__heading {
+    font-size: 6rem; }
+  .main__paragraph {
+    font-size: 1.9rem; } }
+
+@media only screen and (max-width: 600px) {
+  .main__heading {
+    font-size: 5rem; }
+  .main__paragraph {
+    font-size: 1.7rem; } }
+
+@media only screen and (max-width: 530px) {
+  .main__paragraph {
+    font-size: 1.6rem; } }
+
+@media only screen and (max-width: 410px) {
+  .main__heading {
+    font-size: 3rem; }
+  .main__paragraph {
+    font-size: 1.2rem; } }
+
+/* ----------------------------------------------- */
+/* ---------------- UTILITIES -------------------- */
+/* ----------------------------------------------- */
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+/* ----------------------------------------------- */
+/* -------------------- GRID --------------------- */
+/* ----------------------------------------------- */
+.row {
+  margin: 0 auto;
+  /* ----------------------------------------------- */
+  /* --- MEDIA QUESRIES OF GRID --- */
+  /* ----------------------------------------------- */ }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media only screen and (max-width: 81.3em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 10rem) / 3); }
+  @media only screen and (max-width: 81.3em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 10rem; }
+      @media only screen and (max-width: 81.3em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media only screen and (max-width: 81.3em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  @media only screen and (max-width: 37.5em) {
+    .row {
+      max-width: 40rem;
+      padding: 0 3rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 10rem; }
+      @media only screen and (max-width: 37.5em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+
+/* ----------------------------------------------- */
+/* ------------------ HEADER --------------------- */
+/* ----------------------------------------------- */
+.header {
+  background-color: #17252a;
+  height: 100%;
+  width: 8rem;
+  z-index: 3;
+  flex-direction: column;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  position: fixed;
+  color: #ffffff;
+  float: left;
+  /* ----------------------------------------------- */
+  /* --- GURUVINAYAK LOGO BOX --- */
+  /* ----------------------------------------------- */
+  /* ----------------------------------------------- */
+  /* --- MAIN NAVIGATION--- */
+  /* ----------------------------------------------- */
+  /* ----------------------------------------------- */
+  /* --- MADE BY NEPHICS IN HEADER --- */
+  /* ----------------------------------------------- */
+  /* ----------------------------------------------- */
+  /* --- BURGER NAVIGATION FOR PHONE --- */
+  /* ----------------------------------------------- */ }
+  .header__collapse {
+    display: none; }
+  .header__logo-box {
+    display: inline-block;
+    background-color: #111111;
+    padding: 1rem 0;
+    letter-spacing: 0.08rem; }
+    .header__logo-box__img {
+      width: 5rem; }
+  .header__nav {
+    display: inline-block;
+    margin: auto 0;
+    backface-visibility: hidden;
+    font-family: "cocomatlight", sans-serif; }
+    .header__nav-link {
+      color: #def2f1;
+      font-size: 2.5rem;
+      line-height: 7rem;
+      display: block; }
+      .header__nav-link--home {
+        animation: fadein .5s; }
+        .header__nav-link--home:hover svg {
+          display: none; }
+        .header__nav-link--home:hover::before {
+          content: "HOME";
+          font-size: 1.2rem;
+          color: #3aafa9;
+          animation: fadein .75s; }
+      .header__nav-link--aboutme {
+        animation: fadein .5s; }
+        .header__nav-link--aboutme:hover svg {
+          display: none; }
+        .header__nav-link--aboutme:hover::before {
+          content: "ABOUT ME";
+          font-size: 1.2rem;
+          color: #3aafa9;
+          animation: fadein .75s; }
+      .header__nav-link--aboutyou {
+        animation: fadein .5s; }
+        .header__nav-link--aboutyou:hover svg {
+          display: none; }
+        .header__nav-link--aboutyou:hover::before {
+          content: "ABOUT YOU";
+          font-size: 1.2rem;
+          color: #3aafa9;
+          animation: fadein .75s; }
+      .header__nav-link--paintings {
+        animation: fadein .5s; }
+        .header__nav-link--paintings:hover svg {
+          display: none; }
+        .header__nav-link--paintings:hover::before {
+          content: "PAINTINGS";
+          font-size: 1.2rem;
+          color: #3aafa9;
+          animation: fadein .75s; }
+      .header__nav-link--contact {
+        animation: fadein .5s; }
+        .header__nav-link--contact:hover svg {
+          display: none; }
+        .header__nav-link--contact:hover::before {
+          content: "CONTACT";
+          font-size: 1.2rem;
+          color: #3aafa9;
+          animation: fadein .75s; }
+  .header__nephics {
+    display: inline-block;
+    padding: 2rem 0.5rem;
+    text-transform: uppercase; }
+  .header__burger {
+    display: none;
+    /* ----- FUNCTIONALITY OF NAVIGATION ----- */
+    /* ----- BURGER AND CROSS ICON ----- */ }
+    .header__burger__checkbox {
+      display: none; }
+    .header__burger__button {
+      background-color: #17252a;
+      height: 7rem;
+      width: 7rem;
+      position: fixed;
+      top: 0.6rem;
+      right: 2rem;
+      border-radius: 50%;
+      z-index: 2000;
+      box-shadow: 0 1rem 3rem rgba(17, 17, 17, 0.1);
+      text-align: center;
+      cursor: pointer; }
+    .header__burger__background {
+      height: 5.8rem;
+      width: 5.8rem;
+      border-radius: 50%;
+      position: fixed;
+      top: 0.9rem;
+      right: 2.4rem;
+      background-image: radial-gradient(rgba(23, 37, 42, 0.85), rgba(58, 175, 169, 0.85));
+      z-index: 1000;
+      transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+    .header__burger__nav {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1500;
+      opacity: 0;
+      width: 0;
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .header__burger__list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      list-style: none;
+      text-align: center;
+      width: 100%; }
+    .header__burger__item {
+      margin: 1rem; }
+    .header__burger__link:link, .header__burger__link:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: #def2f1;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-size: 220%;
+      transition: all .4s; }
+    .header__burger__checkbox:checked ~ .header__burger__background {
+      transform: scale(80); }
+    .header__burger__checkbox:checked ~ .header__burger__nav {
+      opacity: 1;
+      width: 100%; }
+    .header__burger__icon {
+      position: relative;
+      margin-top: 3.5rem; }
+      .header__burger__icon, .header__burger__icon::before, .header__burger__icon::after {
+        width: 3rem;
+        height: 2px;
+        background-color: #def2f1;
+        display: inline-block; }
+      .header__burger__icon::before, .header__burger__icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s; }
+      .header__burger__icon::before {
+        top: -.8rem; }
+      .header__burger__icon::after {
+        top: .8rem; }
+    .header__burger__button:hover .header__burger__icon::before {
+      top: -1rem; }
+    .header__burger__button:hover .header__burger__icon::after {
+      top: 1rem; }
+    .header__burger__checkbox:checked + .header__burger__button .header__burger__icon {
+      background-color: transparent; }
+    .header__burger__checkbox:checked + .header__burger__button .header__burger__icon::before {
+      top: 0;
+      transform: rotate(135deg); }
+    .header__burger__checkbox:checked + .header__burger__button .header__burger__icon::after {
+      top: 0;
+      transform: rotate(-135deg); }
+
+/* ----------------------------------------------- */
+/* --- FOOTER FOR PHONE --- */
+/* ----------------------------------------------- */
+.footer {
+  display: none;
+  background-color: #17252a;
+  height: 6rem;
+  position: absolute;
+  width: 100%;
+  max-width: 100%; }
+  .footer__nephics {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    position: absolute;
+    left: 26vw;
+    top: 40%; }
+
+/* ----------------------------------------------- */
+/* --- MEDIA QUERIES FOR HEADER --- */
+/* ----------------------------------------------- */
+/* ----- iPAD POTRAIT MODE ----- */
+@media only screen and (max-width: 960px) {
+  .header {
+    height: 8rem;
+    width: 100%;
+    display: block; }
+    .header__logo-box {
+      display: block;
+      float: left;
+      width: 10rem;
+      padding-top: 0.5rem; }
+      .header__logo-box__img {
+        width: 4.5rem; }
+    .header__nav li {
+      list-style: none;
+      display: inline-block;
+      padding: 0.3rem 2.5rem; }
+    .header__nav-link {
+      font-size: 2rem;
+      display: block; }
+    .header__nephics {
+      float: right;
+      margin-top: 0rem;
+      margin-right: 0.5rem; } }
+
+/* ----- SMALL TABLETS ----- */
+@media only screen and (max-width: 750px) {
+  .header__nav-link {
+    font-size: 1.8rem;
+    display: block; }
+  .header__nav li {
+    padding: 0.3rem 1.5rem; } }
+
+/* ----- NORMAL MOBILE PHONES ----- */
+@media only screen and (max-width: 530px) {
+  .header__nav {
+    display: none; }
+  .header__nephics {
+    display: none; }
+  .header__burger {
+    display: block; }
+  .footer {
+    display: block; } }
+
+/* ----- SMALL MOBILE PHONES ----- */
+@media only screen and (max-width: 415px) {
+  .footer__nephics {
+    left: 18vw; } }
+
+@media only screen and (max-width: 355px) {
+  .footer__nephics {
+    left: 15vw; } }
+
+/* ----------------------------------------------- */
+/* ---------------- FLIP CARD -------------------- */
+/* ----------------------------------------------- */
+.card {
+  margin-bottom: 0rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem;
+  /* --------------------------------- */
+  /* FUNCTIONALITY OF CARD */
+  /* --------------------------------- */
+  /* ----------------------------- */
+  /* FRONT SIDE STYLING */
+  /* ----------------------------- */
+  /* ----- ERA REPRESENTING PAINTING ----- */
+  /* ----- NAME OF THE ERA ----- */
+  /* ------------------------------*/
+  /* BACK SIDE STYLING */
+  /* ------------------------------*/
+  /* ----- DESCRIPTION OF THE ERA ----- */
+  /* ----------------------------------------------- */
+  /* --- MEDIA QUESRIES OF CARD --- */
+  /* ----------------------------------------------- */ }
+  .card__side {
+    height: 52rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(17, 17, 17, 0.15); }
+    .card__side--front {
+      background-color: #ffffff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #731829, #30181c); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #797923, #11110e); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #464e6e, #151b30); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 80%;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    .card__picture--1 {
+      background-image: url(../files/p1.jpg); }
+    .card__picture--2 {
+      background-image: url(../files/p2.jpg); }
+    .card__picture--3 {
+      background-image: url(../files/p3.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #ffffff;
+    position: absolute;
+    top: 40rem;
+    right: 2rem;
+    width: 75%; }
+    .card__heading-span {
+      padding: 1rem 1rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone; }
+      .card__heading-span--1 {
+        background-image: linear-gradient(to right bottom, rgba(115, 24, 41, 0.85), rgba(48, 24, 28, 0.85)); }
+      .card__heading-span--2 {
+        background-image: linear-gradient(to right bottom, rgba(121, 121, 35, 0.85), rgba(17, 17, 14, 0.85)); }
+      .card__heading-span--3 {
+        background-image: linear-gradient(to right bottom, rgba(70, 78, 110, 0.85), rgba(21, 27, 48, 0.85)); }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__description-box {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 7rem; }
+  .card__description-heading {
+    font-size: 3rem;
+    font-weight: 100;
+    font-variant: small-caps;
+    font-weight: 200; }
+  .card__description-text {
+    font-size: 1.8rem;
+    padding: 1rem auto; }
+  @media only screen and (max-width: 90em), only screen and (hover: none) {
+    .card {
+      height: auto;
+      border-radius: 3px;
+      background-color: #ffffff;
+      box-shadow: 0 1.5rem 4rem rgba(17, 17, 17, 0.15); }
+      .card__heading {
+        top: 43rem;
+        width: 75%; }
+      .card:hover .card__side--front {
+        transform: rotateY(0); }
+      .card__side {
+        height: 38rem;
+        position: relative;
+        box-shadow: none;
+        /* ----------------------------- */
+        /* FRONT SIDE STYLING */
+        /* ----------------------------- */
+        /* ------------------------------*/
+        /* BACK SIDE STYLING */
+        /* ------------------------------*/ }
+        .card__side--front {
+          height: 55rem; }
+        .card__side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); }
+      .card__cta {
+        position: relative;
+        top: 0%;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem; }
+      .card__description-box {
+        margin-bottom: 3rem; }
+      .card__description-heading {
+        font-size: 2.5rem; } }
+  @media only screen and (max-width: 81.3em), only screen and (hover: none) {
+    .card__side {
+      height: 34rem;
+      position: relative;
+      box-shadow: none;
+      /* ----------------------------- */
+      /* FRONT SIDE STYLING */
+      /* ----------------------------- */
+      /* ------------------------------*/
+      /* BACK SIDE STYLING */
+      /* ------------------------------*/ }
+      .card__side--front {
+        height: 55rem; }
+      .card__side--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); } }
+  @media only screen and (max-width: 26.3em), only screen and (hover: none) {
+    .card__side {
+      height: 31rem;
+      position: relative;
+      box-shadow: none;
+      /* ----------------------------- */
+      /* FRONT SIDE STYLING */
+      /* ----------------------------- */
+      /* ------------------------------*/
+      /* BACK SIDE STYLING */
+      /* ------------------------------*/ }
+      .card__side--front {
+        height: 55rem; }
+      .card__side--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); }
+    .card__description-box {
+      margin-bottom: 3rem; }
+    .card__description-heading {
+      font-size: 2rem; }
+    .card__description-text {
+      font-size: 1.3rem; } }
+
+/* ----------------------------------------------- */
+/* ---------------- CONTACT FORM ----------------- */
+/* ----------------------------------------------- */
+/* ---------------------------------------- */
+/* --- STYLING OF FORM SECTION --- */
+/* ---------------------------------------- */
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../files/background.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(17, 17, 17, 0.2);
+  margin: 2.6rem 0;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative; }
+  @media only screen and (max-width: 81.3em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../files/background.jpg);
+      background-size: cover;
+      margin: 4.6rem 0;
+      width: 100% !important; } }
+  @media only screen and (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../files/background.jpg); } }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
+    @media only screen and (max-width: 81.3em) {
+      .book__form {
+        width: 65%; } }
+    @media only screen and (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }
+
+/* ---------------------------------------- */
+/* --- STYLING OF INPUT FORM  --- */
+/* ---------------------------------------- */
+.form {
+  margin-top: 3rem; }
+  .form__group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: #0c4641;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rbga(#ffffff, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    transition: all .3s; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.1);
+      border-bottom: 3px solid #0c4641; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #17252a; }
+    .form__input::-webkit-input-placeholder {
+      color: #0c4641; }
+  .form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block;
+    transition: all .3s;
+    color: #0c4641; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
+
+#message {
+  width: 90%; }
+
+/* ---------------------------------------- */
+/* --- MAIL GURUVINAYAK --- */
+/* ---------------------------------------- */
+.mail-guru {
+  z-index: 10000;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #17252a;
+  display: inline-block;
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: -3.2rem;
+  right: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 9%; }
+
+/* ----------------------------------------------- */
+/* ------------------ BUTTON --------------------- */
+/* ----------------------------------------------- */
+.btn {
+  /* ----------------------------- */
+  /* BUTTON ON FLIP CARD */
+  /* ----------------------------- */
+  /* ----------------------------- */
+  /* BUTTON ON CONTACT FORM */
+  /* ----------------------------- */
+  /* ----------------------------- */
+  /* BUTTON FUNCTIONALITY */
+  /* ----------------------------- */ }
+  .btn, .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer; }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.2); }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .btn:active, .btn:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.2); }
+  .btn--white {
+    background-color: #ffffff;
+    color: #0c4641;
+    font-variant: small-caps; }
+    .btn--white::after {
+      background-color: #ffffff; }
+  .btn--form {
+    background-color: #3aafa9;
+    color: #ffffff; }
+    .btn--form::after {
+      background-color: #0c4641; }
+  .btn::after {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s; }
+  .btn--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; }
+
+/* ----------------------------- */
+/* BUTTON TEXT */
+/* ----------------------------- */
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #0c4641;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #0c4641;
+  padding: 3px;
+  transition: all .2s; }
+
+.btn-text:hover {
+  background-color: #0c4641;
+  color: #ffffff;
+  box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.15);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.15);
+  transform: translateY(0); }
+
+@media only screen and (max-width: 350px) {
+  .btn:link, .btn:visited {
+    font-size: 1rem; } }
