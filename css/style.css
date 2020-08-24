@@ -622,16 +622,18 @@ body {
   display: none;
   background-color: #17252a;
   height: 6rem;
-  position: absolute;
   width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  flex-direction: column; }
+  .footer__div {
+    text-align: center;
+    display: inline-block;
+    margin: auto 0; }
   .footer__nephics {
     color: #e7e7e7;
     text-transform: uppercase;
     letter-spacing: 1rem;
-    position: absolute;
-    left: 26vw;
-    top: 40%; }
+    font-size: 1.6rem; }
 
 /* ----------------------------------------------- */
 /* --- MEDIA QUERIES FOR HEADER --- */
@@ -678,16 +680,7 @@ body {
   .header__burger {
     display: block; }
   .footer {
-    display: block; } }
-
-/* ----- SMALL MOBILE PHONES ----- */
-@media only screen and (max-width: 415px) {
-  .footer__nephics {
-    left: 18vw; } }
-
-@media only screen and (max-width: 355px) {
-  .footer__nephics {
-    left: 15vw; } }
+    display: flex; } }
 
 /* ----------------------------------------------- */
 /* ---------------- FLIP CARD -------------------- */
@@ -967,6 +960,12 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem); }
+  .form__success {
+    color: #00771a;
+    font-size: 1.7rem; }
+  .form__error {
+    color: #be0000;
+    font-size: 1.7rem; }
 
 #message {
   width: 90%; }
