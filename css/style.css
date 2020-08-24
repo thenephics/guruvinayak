@@ -79,8 +79,8 @@ body {
   /* ----- LANDING PAGE ----- */
   /* ----- PAINTINGS PAGE ----- */ }
   .main__landing {
-    background-image: -webkit-gradient(linear, right top, left top, from(rgba(12, 70, 65, 0.601)), to(rgba(58, 175, 169, 0.601))), url("../files/background.jpg");
-    background-image: linear-gradient(to left, rgba(12, 70, 65, 0.601), rgba(58, 175, 169, 0.601)), url("../files/background.jpg");
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(12, 70, 65, 0.601)), to(rgba(58, 175, 169, 0.601))), url("../files/bg.jpg");
+    background-image: linear-gradient(to left, rgba(12, 70, 65, 0.601), rgba(58, 175, 169, 0.601)), url("../files/bg.jpg");
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -96,7 +96,8 @@ body {
 /* ----- LANDING PAGE ----- */
 @media only screen and (max-width: 840px) {
   .main__landing {
-    background-position: left; } }
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(12, 70, 65, 0.601)), to(rgba(58, 175, 169, 0.601))), url("../files/bgsmall.jpg");
+    background-image: linear-gradient(to left, rgba(12, 70, 65, 0.601), rgba(58, 175, 169, 0.601)), url("../files/bgsmall.jpg"); } }
 
 /* ----- PAINTINGS PAGE ----- */
 @media only screen and (max-width: 1440px) {
@@ -549,10 +550,11 @@ body {
       top: 0;
       left: 0;
       z-index: 1500;
+      visibility: hidden;
       opacity: 0;
       width: 0;
-      -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+      -webkit-transition: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
     .header__burger__list {
       position: absolute;
       top: 50%;
@@ -573,14 +575,15 @@ body {
       text-decoration: none;
       text-transform: uppercase;
       background-size: 220%;
-      -webkit-transition: all .4s;
-      transition: all .4s; }
+      -webkit-transition: .4s;
+      transition: .4s; }
     .header__burger__checkbox:checked ~ .header__burger__background {
       -webkit-transform: scale(80);
       transform: scale(80); }
     .header__burger__checkbox:checked ~ .header__burger__nav {
       opacity: 1;
-      width: 100%; }
+      width: 100%;
+      visibility: visible; }
     .header__burger__icon {
       position: relative;
       margin-top: 3.5rem; }
@@ -593,8 +596,8 @@ body {
         content: "";
         position: absolute;
         left: 0;
-        -webkit-transition: all .2s;
-        transition: all .2s; }
+        -webkit-transition: .2s;
+        transition: .2s; }
       .header__burger__icon::before {
         top: -.8rem; }
       .header__burger__icon::after {
@@ -899,7 +902,7 @@ body {
 /* --- STYLING OF FORM SECTION --- */
 /* ---------------------------------------- */
 .book {
-  background-image: linear-gradient(105deg, rgba(231, 231, 231, 0.9) 0%, rgba(231, 231, 231, 0.9) 50%, transparent 50%), url(../files/background.jpg);
+  background-image: linear-gradient(105deg, rgba(231, 231, 231, 0.9) 0%, rgba(231, 231, 231, 0.9) 50%, transparent 50%), url(../files/bg.jpg);
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(17, 17, 17, 0.2);
@@ -910,13 +913,13 @@ body {
   position: relative; }
   @media only screen and (max-width: 81.3em) {
     .book {
-      background-image: linear-gradient(105deg, rgba(231, 231, 231, 0.9) 0%, rgba(231, 231, 231, 0.9) 65%, transparent 65%), url(../files/background.jpg);
+      background-image: linear-gradient(105deg, rgba(231, 231, 231, 0.9) 0%, rgba(231, 231, 231, 0.9) 65%, transparent 65%), url(../files/bg.jpg);
       background-size: cover;
       margin: 4.6rem 0;
       width: 100% !important; } }
   @media only screen and (max-width: 56.25em) {
     .book {
-      background-image: linear-gradient(to right, rgba(231, 231, 231, 0.9) 0%, rgba(231, 231, 231, 0.9) 100%), url(../files/background.jpg); } }
+      background-image: linear-gradient(to right, rgba(231, 231, 231, 0.9) 0%, rgba(231, 231, 231, 0.9) 100%), url(../files/bgsmall.jpg); } }
   .book__form {
     width: 50%;
     padding: 6rem; }
@@ -974,7 +977,7 @@ body {
 /* --- MAIL GURUVINAYAK --- */
 /* ---------------------------------------- */
 .mail-guru {
-  z-index: 10000;
+  z-index: 1000;
   color: rgba(231, 231, 231, 0.9);
   background-color: #17252a;
   display: inline-block;
