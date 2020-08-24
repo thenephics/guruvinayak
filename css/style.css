@@ -98,6 +98,7 @@ body {
   .main__landing {
     background-image: -webkit-gradient(linear, right top, left top, from(rgba(12, 70, 65, 0.601)), to(rgba(58, 175, 169, 0.601))), url("../files/bgsmall.jpg");
     background-image: linear-gradient(to left, rgba(12, 70, 65, 0.601), rgba(58, 175, 169, 0.601)), url("../files/bgsmall.jpg"); } }
+    background-position: right;
 
 /* ----- PAINTINGS PAGE ----- */
 @media only screen and (max-width: 1440px) {
@@ -521,7 +522,7 @@ body {
       top: 0.6rem;
       right: 2rem;
       border-radius: 50%;
-      z-index: 2000;
+      z-index: 20000 !important;
       -webkit-box-shadow: 0 1rem 3rem rgba(17, 17, 17, 0.1);
       box-shadow: 0 1rem 3rem rgba(17, 17, 17, 0.1);
       text-align: center;
@@ -534,7 +535,7 @@ body {
       top: 0.9rem;
       right: 2.4rem;
       background-image: radial-gradient(#17252a, #3aafa9);
-      z-index: 1000;
+      z-index: 10000 !important;
       -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
       transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
       transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -544,7 +545,7 @@ body {
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 1500;
+      z-index: 15000 !important;
       visibility: hidden;
       -webkit-visibility: hidden;
       opacity: 0;
