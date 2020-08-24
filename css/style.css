@@ -97,8 +97,8 @@ body {
 @media only screen and (max-width: 840px) {
   .main__landing {
     background-image: -webkit-gradient(linear, right top, left top, from(rgba(12, 70, 65, 0.601)), to(rgba(58, 175, 169, 0.601))), url("../files/bgsmall.jpg");
-    background-image: linear-gradient(to left, rgba(12, 70, 65, 0.601), rgba(58, 175, 169, 0.601)), url("../files/bgsmall.jpg"); } }
-    background-position: right;
+    background-image: linear-gradient(to left, rgba(12, 70, 65, 0.601), rgba(58, 175, 169, 0.601)), url("../files/bgsmall.jpg");
+    background-position: right; } }
 
 /* ----- PAINTINGS PAGE ----- */
 @media only screen and (max-width: 1440px) {
